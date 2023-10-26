@@ -67,7 +67,7 @@ const calculateArcProperties = (index, startTime) => {
 
 arcs = colors.map((color, index) => {
   const audio = new Audio(`audio-keys/key-${index}.mp3`);
-  audio.volume = 0.04;
+  audio.volume = 0.06;
 
   const { velocity, nextImpactTime } = calculateArcProperties(index, startTime);
 
@@ -78,7 +78,6 @@ arcs = colors.map((color, index) => {
     velocity
   }
 });
-
 
 // --> Values for the drawing
 const draw = () => {
