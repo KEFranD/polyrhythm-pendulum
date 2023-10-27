@@ -55,7 +55,7 @@ const calculateArcProperties = (index, startTime) => {
   const oneFullLoop = 2 * Math.PI;
   const maxCycles = 50;
   const numberOfLoops = maxCycles - index;
-  const duration = 900;
+  const duration = 600;
   const velocity = (oneFullLoop * numberOfLoops) / duration;
   const nextImpactTime = calculateNextImpactTime(startTime, velocity); // --> for the sound on impact
 
@@ -67,7 +67,7 @@ const calculateArcProperties = (index, startTime) => {
 
 arcs = colors.map((color, index) => {
   const audio = new Audio(`audio-keys/key-${index}.mp3`);
-  audio.volume = 0.06;
+  audio.volume = 0.3;
 
   const { velocity, nextImpactTime } = calculateArcProperties(index, startTime);
 
